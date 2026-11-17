@@ -1,0 +1,119 @@
+{
+  "reference_inverse": {
+    "method": "reference_inverse",
+    "controller_parameters": {}
+  },
+  "retained": {
+    "method": "retained",
+    "controller_parameters": {}
+  },
+  "calibrate_only": {
+    "method": "calibrate_only",
+    "controller_parameters": {
+      "reference_inverse": true
+    }
+  },
+  "no_time": {
+    "method": "no_time",
+    "controller_parameters": {
+      "reference_inverse": true
+    }
+  },
+  "no_motion": {
+    "method": "no_motion",
+    "controller_parameters": {
+      "reference_inverse": true
+    }
+  },
+  "fixed_observer": {
+    "method": "fixed_observer",
+    "controller_parameters": {
+      "stiffness_prior": 5000.0,
+      "damping_prior": 50.0,
+      "reference_inverse": true
+    }
+  },
+  "two_observer_estimator": {
+    "method": "two_observer_estimator",
+    "controller_parameters": {
+      "correction": 0.25,
+      "damping_prior": 50.0,
+      "reference_inverse": true
+    }
+  },
+  "pi": {
+    "method": "pi",
+    "controller_parameters": {
+      "gain": 0.008,
+      "integral_time": 0.02
+    }
+  },
+  "force_cbf": {
+    "method": "force_cbf",
+    "controller_parameters": {
+      "gain": 0.016,
+      "barrier_gain": 5.0,
+      "observer_gain": 30.0
+    }
+  },
+  "oidob": {
+    "method": "oidob",
+    "controller_parameters": {
+      "gain": 0.008,
+      "omega": 5.0
+    }
+  },
+  "mob": {
+    "method": "mob",
+    "controller_parameters": {
+      "gain": 0.008,
+      "omega": 15.0
+    }
+  },
+  "cdyob": {
+    "method": "cdyob",
+    "controller_parameters": {
+      "gain": 0.016,
+      "omega": 5.0
+    }
+  },
+  "aftac_outer": {
+    "method": "aftac_outer",
+    "controller_parameters": {
+      "damping": 125.0,
+      "bandwidth": 5.0
+    }
+  },
+  "ph_force_tcst": {
+    "method": "ph_force_tcst",
+    "controller_parameters": {
+      "stiffness": 25.0,
+      "damping": 40.0,
+      "force_gain": 0.025,
+      "desired_mass": 1.0
+    },
+    "torque_delay_location": "outer"
+  },
+  "oracle_dfc": {
+    "method": "oracle_dfc",
+    "controller_parameters": {
+      "kp": 0.0002,
+      "ki": 0.005,
+      "impedance_stiffness": 1000.0
+    },
+    "torque_delay_location": "outer"
+  },
+  "oracle_tcst": {
+    "method": "oracle_tcst",
+    "controller_parameters": {
+      "kp": 0.0002,
+      "ki": 0.005,
+      "impedance_stiffness": 1000.0,
+      "radius": 0.004,
+      "alpha": 50.0,
+      "beta": 50.0,
+      "model_path": "models/oracle_ensemble.npz"
+    },
+    "torque_delay_location": "outer"
+  }
+}
